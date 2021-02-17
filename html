@@ -1,0 +1,61 @@
+<form>
+<div class="container">
+<div class="formCampos">
+<div><label>Contato</label>
+<input id="nomeCliente" type="text" placeholder="Nome" /></div>
+<div><label>CPF ou CNPJ do Titular</label>
+<input id="cpfCnpj" type="text" placeholder="CPF ou CNPJ" /></div>
+<div><label>Telefone</label>
+<input id="tel" type="tel" placeholder="Telefone" /></div>
+</div>
+<div class="formCampos">
+<div><label>Data vencimento do boleto</label>
+<input id="dtvencBol" type="date" /></div>
+<div><label>Data Pagamento do boleto</label>
+<input id="dtPagBol" type="date" /></div>
+<div><label>Banco de pagamento</label>
+<input id="txtBancoPag" list="banks" type="text" placeholder="Informe o Banco" />
+<datalist id="banks">
+<option value="Banco do Brasil"></option>
+<option value="Banestes"></option>
+<option value="Bradesco"></option>
+<option value="Caixa Econômica Federal"></option>
+<option value="Itaú Unibanco"></option>
+<option value="Lotérica"></option>
+<option value="MercadoPago"></option>
+<option value="Nubank"></option>
+<option value="Original"></option>
+<option value="PicPay"></option>
+<option value="Santander"></option>
+<option value="SICOOB"></option></datalist></div>
+</div>
+<div class="formCampos">
+<div><label>Contrato</label>
+<input id="contratoCli" type="text" placeholder="Contrato" /></div>
+<div><label>Cx de Atendimento</label>
+<input id="cxAtendCli" type="text" placeholder="Caixa de Atendimento" /></div>
+<div><label>Porta do Splinter</label>
+<input id="ptSpltCli" type="number" placeholder="Porta do Splinter" /></div>
+</div>
+</div>
+&nbsp;
+<div><label>Tipo de atendimento:</label>
+<select id="slcAtendimento" onchange="scriptTXT()">
+<option value="">Selecione o tipo de atendimento</option>
+<option value="ch_Tec">CHAMADO TÉCNICO</option>
+<option value="ch_TecFiel">VISITA TÉCNICA FIELD/LOSS</option>
+<option value="ch_TecTrocarONUFiel">TROCAR ONU AN5506-02-F</option>
+<option value="ch_TecHuawei">CHAMADO TÉCNICO HUAWEI</option>
+<option value="chFin_2ViaBoleto">2ª VIA DE BOLETO</option>
+<option value="chFin_InfPag">INF. PAGAMENTO</option>
+<option value="chFin_InfPagNaoDisp">INF PAG NÃO DISPONÍVEL</option>
+</select></div>
+<div><label>Script de encerramento!</label>
+<textarea id="scriptEnd" cols="80" rows="10" onchange="scriptTXT()"></textarea></div>
+
+<div class="container">
+<div><input id="btnCopy" type="button" value="Copiar" /></div>
+<div><input id="btnLimpar" type="reset" value="Limpar" /></div>
+</div>
+
+</form>
